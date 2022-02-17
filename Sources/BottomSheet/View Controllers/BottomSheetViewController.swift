@@ -57,9 +57,7 @@ class BottomSheetViewController<Content: View>: UIViewController, UISheetPresent
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .systemBackground.withAlphaComponent(0.5)
-        
+                
         addChild(contentView)
         view.addSubview(contentView.view)
 
@@ -80,7 +78,10 @@ class BottomSheetViewController<Content: View>: UIViewController, UISheetPresent
             presentationController.prefersEdgeAttachedInCompactHeight = prefersEdgeAttachedInCompactHeight
             presentationController.selectedDetentIdentifier = selectedDetentIdentifier
             presentationController.widthFollowsPreferredContentSizeWhenEdgeAttached = widthFollowsPreferredContentSizeWhenEdgeAttached
+            presentationController.modalPresentationStyle = .overCurrentContext
             presentationController.delegate = self
+            
+
         }
     }
 
