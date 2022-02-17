@@ -47,8 +47,6 @@ class BottomSheetViewController<Content: View>: UIViewController, UISheetPresent
         
         self.contentView = UIHostingController(rootView: content)
 
-        self.contentView.view.backgroundColor = nil
-
         super.init(nibName: nil, bundle: nil)
         self.isModalInPresentation = isModalInPresentation
     }
