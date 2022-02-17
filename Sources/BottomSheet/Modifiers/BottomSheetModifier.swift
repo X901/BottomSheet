@@ -88,7 +88,7 @@ struct BottomSheet<T: Any, ContentView: View>: ViewModifier {
         if isPresented {
             withAnimation {
         Color.black.opacity(0.5).ignoresSafeArea()
-                .animation(.easeOut, value: isPresented)
+                .animation(.easeInOut, value: isPresented)
             }
         }
     }
