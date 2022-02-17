@@ -84,11 +84,6 @@ struct BottomSheet<T: Any, ContentView: View>: ViewModifier {
         content
             .onChange(of: isPresented, perform: updatePresentation)
             .onChange(of: selectedDetentIdentifier, perform: updateSelectedDetentIdentifier)
-            
-            if isPresented {
-             Color.black.opacity(0.5).ignoresSafeArea()
-                    .animation(.easeIn, value: isPresented)
-            }
         }
     }
 

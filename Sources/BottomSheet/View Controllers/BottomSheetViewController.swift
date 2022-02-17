@@ -57,7 +57,9 @@ class BottomSheetViewController<Content: View>: UIViewController, UISheetPresent
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        view.backgroundColor = .systemBackground.withAlphaComponent(0.5)
+        
         addChild(contentView)
         view.addSubview(contentView.view)
 
