@@ -47,6 +47,8 @@ class BottomSheetViewController<Content: View>: UIViewController, UISheetPresent
         
         self.contentView = UIHostingController(rootView: content)
 
+        self.contentView.view.backgroundColor = nil
+
         super.init(nibName: nil, bundle: nil)
         self.isModalInPresentation = isModalInPresentation
     }
@@ -78,7 +80,6 @@ class BottomSheetViewController<Content: View>: UIViewController, UISheetPresent
             presentationController.prefersEdgeAttachedInCompactHeight = prefersEdgeAttachedInCompactHeight
             presentationController.selectedDetentIdentifier = selectedDetentIdentifier
             presentationController.widthFollowsPreferredContentSizeWhenEdgeAttached = widthFollowsPreferredContentSizeWhenEdgeAttached
-            presentationController.modalPresentationStyle = .overCurrentContext
             presentationController.delegate = self
             
 
